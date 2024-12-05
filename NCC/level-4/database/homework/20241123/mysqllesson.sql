@@ -92,3 +92,93 @@ first_name varchar(20) not null,
 middle_name varchar(20),
 age integer not null,
 current_status varchar(20) not null default'employed');
+
+-- side note proper use of this ('') 
+create table chess(name varchar(30));
+insert into chess(name)
+values ('King'),
+       ('King\'s wife');
+
+      --  name
+      --  King
+      --  King's wife                              this is how it will come out. 
+                                                  -- it better to use '' for varchar,etc instead of "". 
+                                                  --  if it is something like 's just use \'s.
+
+
+                        -- For next lesson CRUD(Create,Read,Update,Delete) I have to drop all tables.
+                        -- have dropped all the tables in the my Sql app.
+
+create table Cats(
+cat_id int auto_increment primary key,
+name varchar(40),
+breed varchar(40),
+age int);
+
+insert into Cats (name,breed,age)
+values ('Ringo', 'Tabby', 4),
+       ('Cindy', 'Maine Coon', 10),
+       ('Dumbledore', 'Maine Coon', 11),
+       ('Egg', 'Persian', 4),
+       ('Misty', 'Tabby', 13),
+       ('George Michael', 'Ragdoll', 9),
+       ('Jackson', 'Sphynx', 7);
+ select * from Cats;                         -- select is a form of read and * means show me all the columns.
+                        --  so we can replace * with the column name of the one we want to know if we want to.
+
+select name from Cats;
+select age from Cats;
+select breed from Cats;      -- like this. also you can select multipule columns like this.
+
+select name,age from Cats;
+
+select * from Cats where age=4;    -- where can narrow things down and have alots of use other than select, like update and delete.
+                  -- also there no need to see age whenever you do age=n.
+select name from Cats where age=4;
+select name,breed from Cats where age=4;  -- also you can search for other specific stuff you want with where.
+select * from Cats where name='Egg';    -- like this for example
+
+-- these are the answer to the questions of rapid fire from video
+-- the questions are: 1 show cat_id, 2 show name and breed,3 show name and age of tabby cats,
+-- 4 show cat_id that is same as age
+select cat_id from Cats;
+select name,breed from Cats;
+select name,age from Cats where breed='Tabby';
+select cat_id,age from Cats where cat_id=age;
+-- alias is a way to rename the column for a single run meaning for it temporary. 
+-- it is use to make long column name shorter in long code where it need to be typed a lot.
+-- but other than that it doesn't have much use.
+select cat_id as id,name,breed from Cats;      -- when you run it will have id as column name but
+select * from Cats;        -- when you run the next line it will return back to cat_id as column name.
+-- we gonna recreate table again for update.
+CREATE TABLE Employees(employee_id integer not null Auto_increment primary key,
+last_name varchar(20) not null,
+first_name varchar(20) not null,
+middle_name varchar(20),
+age integer not null,
+current_status varchar(20) not null default'employed');
+insert into Employees(first_name,last_name,age)
+values ('Ditty','Joe',36);        -- run the values 3 times
+
+update Employees set current_status='don\'t know',last_name='who care'; -- this gonna change three of their last name and status.
+-- it is update (table) set (column)=n. usually you need to narrow down so need to use it with where.
+-- it a good habit to select before updating to check the content.
+update Employees set current_status='jail',last_name='bro'
+where employee_id=2;         -- this is how it usually use to update just what you need instead of entire row.
+update Cats set age=14
+where name='Misty';
+update Cats set name='Jack' where name='Jackson';    -- question change cat Jackson's name into Jack.
+update Cats set breed='British Shorthair'
+where name='Ringo';          -- question change Ringo's breed to British Shorthair.
+update Cats set age=12
+where breed='Maine Coon';     -- question change cats with breed Maine Coon, age to 12.
+delete from Cats 
+where name='Egg';    -- this delete a single row from cat table
+                     -- delete from (table)
+                     -- where column='value';
+delete from Cats;   -- didn't run this.this will delete all row from cats but the table and columns will stay the same.
+delete from Cats
+where age=4;       -- delete all cats that are age 4.
+delete from Cats
+where age=cat_id;  -- delete all cats that have same age as it's id.
+delete from Cats;  -- delete all cats.
