@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Principal;
 using System.Threading;
 
 namespace ConsoleApp1
@@ -222,7 +224,7 @@ namespace ConsoleApp1
             }
             */
             // 1. Write a program to find maximum between two numbers
-            int mgmg = 23;  //1
+            /*int mgmg = 23;  //1
             int agag = 20;
             if (mgmg < agag)
             {
@@ -440,7 +442,7 @@ namespace ConsoleApp1
             •	Percentage >= 60 % : Grade D
             •	Percentage >= 40 % : Grade E
             •	Percentage < 40 % : Grade F      */
-            double physics = 70;
+            /*double physics = 70;
             double Chemistry = 60;
             double Bio = 90;
             double Math = 80;
@@ -473,166 +475,520 @@ namespace ConsoleApp1
                 grade = "F";
             }
             Console.WriteLine("Average percentage " + average + "%");
-            Console.WriteLine("Grade " + grade);
+            Console.WriteLine("Grade " + grade); */
             /*14. The marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules: Write a program to calculate the division obtained by the student
 •	Percentage above or equal to 60 - First division
 •	Percentage between 50 and 59 - Second division
 •	Percentage between 40 and 49 - Third division
 •	Percentage less than 40 – Fail     */
-            double S1 = 60;
-            double S2 = 70;
-            double S3 = 70;
-            double S4 = 80;
-            double S5 = 50;
-            double TM = S1 +S2 + S3 +S4 +S5;
-            double percentage = TM / 5;
-            string division;
-            if (percentage >= 60)
+            /* double S1 = 60;
+             double S2 = 70;
+             double S3 = 70;
+             double S4 = 80;
+             double S5 = 50;
+             double TM = S1 +S2 + S3 +S4 +S5;
+             double percentage = TM / 5;
+             string division;
+             if (percentage >= 60)
+             {
+                 division = "First Division";
+             }
+             else if (percentage >= 50 && percentage <= 59)
+             {
+                 division = "Second Division";
+             }
+             else if (percentage >= 40 && percentage <= 49)
+             {
+                 division = "Third Division";
+             }
+             else
+             {
+                 division = "Fail";
+             }
+             Console.WriteLine("The student is in " + division);
+             //
+             //16. Find Youngest Age in Three of Student.
+             //Eg: age - 21, 17, 19
+            int Aage = 21;
+             int Bage = 17;
+             int Cage = 19;
+             if (Aage < Bage && Aage < Cage)
+             {
+                 Console.WriteLine("student A is the youngest");
+             }
+             else if (Bage < Aage && Bage < Cage)
+             {
+                 Console.WriteLine("student B is the youngest");
+             }
+             else if (Cage < Aage && Cage < Bage)
+             {
+                 Console.WriteLine("student C is the youngest");
+             }
+             else if (Aage == Bage && Aage < Cage)
+             {
+                 Console.WriteLine("student A and B are the youngest");
+             }
+             else if (Aage == Cage && Aage < Bage)
+             {
+                 Console.WriteLine("student A and C are the youngest");
+             }
+             else if (Bage == Cage && Bage < Aage)
+             {
+                 Console.WriteLine("student C and B are the youngest");
+             }
+             else
+             {
+                 Console.WriteLine("all students are same age");
+             }
+             //18. Write a program that accepts three numbers and check All numbers are equal or two number are equal or all are different.
+             int Num1 = 10;
+             int Num2 = 10;
+             int Num3 = 11;
+             if (Num1 == Num2 && Num2 == Num3)
+             {
+                 Console.WriteLine("All numbers are equal.");
+             }
+             else if (Num1 == Num2 || Num1 == Num3 || Num2 == Num3)
+             {
+                 Console.WriteLine("Two numbers are equal.");
+             }
+             else
+             {
+                 Console.WriteLine("All numbers are different.");
+             }
+             //19. Write a program to create a simple calculator
+             //20. Write a program to check whether the given integer is a multiple of 5
+             int Number = 30;
+             if (Number % 5 == 0)
+             {
+                 Console.WriteLine("the integer is a multiple of 5.");
+             }
+             else
+             {
+                 Console.WriteLine("the integer is not a multiple of 5.");
+             }
+             //29. Write a program to check whether a character is uppercase or lowercase alphabet.
+             char Word = 'b';
+             if (Word >= 'a' && Word <= 'z')
+             {
+                 Console.WriteLine("It is lowercase alphabet");
+             }
+             else if (Word >= 'A' && Word <= 'Z')
+             {
+                 Console.WriteLine("It is uppercase alphabet");
+             }
+             else
+             {
+                 Console.WriteLine("It isn't alphabet");
+             }
+             //31. Write a program to read any month number in integer and display the number of days for this month.
+             int number11 = 6;  //11
+             if (number11 == 1)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 2)
+             {
+                 Console.WriteLine("this month have 28 days sometimes 29 days");
+             }
+             else if (number11 == 3)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 4)
+             {
+                 Console.WriteLine("this month have 30 days");
+             }
+             else if (number11 == 5)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 6)
+             {
+                 Console.WriteLine("this month have 30 days");
+             }
+             else if (number11 == 7)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 8)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 9)
+             {
+                 Console.WriteLine("this month have 30 days");
+             }
+             else if (number11 == 10)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else if (number11 == 11)
+             {
+                 Console.WriteLine("this month have 30 days");
+             }
+             else if (number11 == 12)
+             {
+                 Console.WriteLine("this month have 31 days");
+             }
+             else
+             {
+                 Console.WriteLine("it isn't month number");
+             }*/
+            char vowel = 'a';
+            /*if( vowel == 'a')
             {
-                division = "First Division";
-            }
-            else if (percentage >= 50 && percentage <= 59)
-            {
-                division = "Second Division";
-            }
-            else if (percentage >= 40 && percentage <= 49)
-            {
-                division = "Third Division";
+                Console.WriteLine("this is vowel"); 
             }
             else
             {
-                division = "Fail";
-            }
-            Console.WriteLine("The student is in " + division);
-            //
-            //16. Find Youngest Age in Three of Student.
-            //Eg: age - 21, 17, 19
-           int Aage = 21;
-            int Bage = 17;
-            int Cage = 19;
-            if (Aage < Bage && Aage < Cage)
+                Console.WriteLine("this is not vowel");
+            }*/
+            switch (vowel)
             {
-                Console.WriteLine("student A is the youngest");
+                case 'a': Console.WriteLine("this is vowel"); break;
+                case 'e': Console.WriteLine("this is vowel"); break;
+                case 'i':
+                    Console.WriteLine("this is vowel"); break;
+                case 'o':
+                    Console.WriteLine("this is vowel"); break;
+                case 'u':
+                    Console.WriteLine("this is vowel"); break;
+                default: Console.WriteLine("this is not vowel"); break;
             }
-            else if (Bage < Aage && Bage < Cage)
+            char grade = 'A';
+            switch (grade)
             {
-                Console.WriteLine("student B is the youngest");
+                case 'A':
+                    Console.WriteLine("Excellent"); break;
+                case 'B': Console.WriteLine("Well done"); break;
+                case 'C':
+                    Console.WriteLine("Well done"); break;
+                case 'D':
+                    Console.WriteLine("Pass"); break;
+                case 'F':
+                    Console.WriteLine("Try again"); break;
+                default:
+                    Console.WriteLine("Invalid inpuid"); break;
             }
-            else if (Cage < Aage && Cage < Bage)
+            char vowels = 'h';
+            switch (vowels)
             {
-                Console.WriteLine("student C is the youngest");
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    Console.WriteLine("this is vowel"); break;
+                default:
+                    Console.WriteLine("this is not vowel"); break;
             }
-            else if (Aage == Bage && Aage < Cage)
+            int num1 = 10;
+            int num2 = 20;
+            char operator1 = '+';
+            /*if (operator1 == '+')
             {
-                Console.WriteLine("student A and B are the youngest");
+                Console.WriteLine("the sum of two values is " + (num1 + num2));
             }
-            else if (Aage == Cage && Aage < Bage)
-            {
-                Console.WriteLine("student A and C are the youngest");
+            else if (operator1 == '-')
+            { 
+                Console.WriteLine("the sub of two values is " + (num1 - num2));
             }
-            else if (Bage == Cage && Bage < Aage)
+            else if (operator1 == '*')
             {
-                Console.WriteLine("student C and B are the youngest");
+                Console.WriteLine("the mul of two values is " + (num1 * num2));
+            }
+            else if (operator1 == '/')//sar lat
+            {
+                Console.WriteLine("the div of the two values is " + (num1 / num2));
+            }
+            else if (operator1 == '%')// remainder
+            {
+                Console.WriteLine("the mod if two values is " + (num1 % num2));
             }
             else
             {
-                Console.WriteLine("all students are same age");
-            }
-            //18. Write a program that accepts three numbers and check All numbers are equal or two number are equal or all are different.
-            int Num1 = 10;
-            int Num2 = 10;
-            int Num3 = 11;
-            if (Num1 == Num2 && Num2 == Num3)
+                Console.WriteLine("wrong operator");        
+        }*/
+            /*switch (operator1)
             {
-                Console.WriteLine("All numbers are equal.");
+                case '+':
+                    Console.WriteLine("sum " + (num1 + num2)); break;
+                    case '-':
+                    Console.WriteLine("sub " + (num1 - num2)); break;
+                    case '*':
+                    Console.WriteLine("mul " + (num1  * num2)); break;
+                    case '/':
+                    Console.WriteLine("div " + (num1 / num2)); break;
+                case '%':
+                    Console.WriteLine("mod " + (num1 % num2)); break;
+                default: Console.WriteLine("Invalid operator"); break;
             }
-            else if (Num1 == Num2 || Num1 == Num3 || Num2 == Num3)
+            int sum = 0;
+            for(int i=1;i <= 3; i++)
             {
-                Console.WriteLine("Two numbers are equal.");
-            }
-            else
+                sum = sum + i;
+                Console.WriteLine(sum);
+            }*/
+            /*for (int i=1;i <= 10; i++)
             {
-                Console.WriteLine("All numbers are different.");
-            }
-            //19. Write a program to create a simple calculator
-            //20. Write a program to check whether the given integer is a multiple of 5
-            int Number = 30;
-            if (Number % 5 == 0)
+                Console.WriteLine(i);
+                if (i == 5)
+                {
+                    break;
+                }
+            }*/
+            /*string[] name = { "Aumg Aung", "C M", "Nal", "Ab" };
+            Console.WriteLine(name[0]);
+            Console.WriteLine(name.Length);
+            for (int i = 1; i <= 3; i++)
             {
-                Console.WriteLine("the integer is a multiple of 5.");
+                Console.WriteLine(name[i]);
             }
-            else
+            int[] age = { 20, 19, 20, 21, 22, 26, 23, 17, 25, 27, 29 };
+            Console.WriteLine(age.Length);
+            for (int i = 0; i < age.Length; i++)
+            { Console.WriteLine(age[i]); }
+            int[] mark = { 250, 365, 450, 650, 222, 150, 350, 256 };
+            int max = 0;
+            for (int i = 0; i < mark.Length; i++)
             {
-                Console.WriteLine("the integer is not a multiple of 5.");
+                if (mark[i] > max) { max = mark[i]; }
             }
-            //29. Write a program to check whether a character is uppercase or lowercase alphabet.
-            char Word = 'b';
-            if (Word >= 'a' && Word <= 'z')
+            Console.WriteLine("Max mark is " + max);
+            int ii = 1;
+            while (ii <= 10)
             {
-                Console.WriteLine("It is lowercase alphabet");
+                Console.WriteLine(ii);
+                ii++;
             }
-            else if (Word >= 'A' && Word <= 'Z')
+            int jj = 1;
+            do
             {
-                Console.WriteLine("It is uppercase alphabet");
+                Console.WriteLine(jj + "jj");
+                jj++;
             }
-            else
+            while (jj < 10);
+           /* for (int i= 1;i<= 10; i++)
             {
-                Console.WriteLine("It isn't alphabet");
-            }
-            //31. Write a program to read any month number in integer and display the number of days for this month.
-            int number11 = 6;  //11
-            if (number11 == 1)
+                Console.WriteLine(i);
+            }*/
+            /* int i = 1;
+             while (i <= 10)
+             {
+                 Console.WriteLine(i);
+                 i++;
+             }*/
+            /*int i = 10;
+            while (i >= 1 == true)
             {
-                Console.WriteLine("this month have 31 days");
-            }
-            else if (number11 == 2)
+                Console.WriteLine(i);
+                i--;
+            }*/
+            /* Console.WriteLine("Do you want to play again, please enter yes or no");
+             string result = Console.ReadLine();
+             /*Console.WriteLine(result);*/
+
+            /*while (result == "yes")
             {
-                Console.WriteLine("this month have 28 days sometimes 29 days");
-            }
-            else if (number11 == 3)
+                Console.WriteLine("You are still playing game");
+                Console.WriteLine("Do you want to play again, Please enter yes or no");
+              result =  Console.ReadLine();
+            }*/
+            /* int i = 12;
+             do
+             {
+                 Console.WriteLine(i);
+                 i++;
+             } while (i <= 10);*/
+            /*int i = 12;
+            while (i <= 10)
             {
-                Console.WriteLine("this month have 31 days");
-            }
-            else if (number11 == 4)
+                Console.WriteLine(i);
+                i++;
+            }*/
+            /*int count = 0;
+            for (int i=1; i <= 100; i++)
             {
-                Console.WriteLine("this month have 30 days");
+                if(i % 3 == 0)
+                {
+                    count++;
+                }
             }
-            else if (number11 == 5)
+            Console.WriteLine(count);*/
+            /* string[] name = { "Aung Aung", "Zaw Zaw", "Moe Moe", "Kyaw Kyaw" };
+             Console.WriteLine(name[0]);
+             Console.WriteLine(name[1]);
+             Console.WriteLine(name[2]);
+             Console.WriteLine(name[3]);*/
+
+            /* string[] employeename = new string[5];
+             employeename[0] = "Aung Aung";
+             employeename[1] = "Kyaw Kyaw";
+             employeename[2] = "Moh Moh";
+             employeename[3] = "Hin Hin";
+             employeename[4] = "Lwin Lwin";
+
+
+             Console.WriteLine(employeename[0]);
+             Console.WriteLine(employeename[1]);
+             Console.WriteLine(employeename[2]);
+             Console.WriteLine(employeename[3]);
+             Console.WriteLine(employeename[4]);
+             Console.WriteLine(employeename.Length);*/
+            /* string[] name = new string[5];*/
+            /*Console.WriteLine("Enter a name");
+            string tname = Console.ReadLine();
+            Console.WriteLine("Your name is " + tname);
+            name [0] = tname;
+            Console.WriteLine("Enter a name");
+            tname = Console.ReadLine();
+            Console.WriteLine("Your name is " + tname);
+            name[1] = tname;
+            Console.WriteLine("Enter a name");
+            tname = Console.ReadLine();
+            Console.WriteLine("Your name is " + tname);
+            name[2] = tname;
+            Console.WriteLine("Enter a name");
+            tname = Console.ReadLine();
+            Console.WriteLine("Your name is " + tname);
+            name[3] = tname;
+            Console.WriteLine("Enter a name");
+            tname = Console.ReadLine();
+            Console.WriteLine("Your name is " + tname);
+            name[4] = tname;*/
+            /* for (int i = 0;i<= 4; i++) {
+                 Console.WriteLine("Enter a name");
+                 string tname = Console.ReadLine();
+                 Console.WriteLine("Your name is " + tname);
+                 name[i] = tname;
+             }*/
+            /* string[] city ={"Yangon", "Mandalay", "Npt", "M", "K" };
+                string[] copycity = new string[5];
+                for (int i = 0; i < city.Length; i++)
+                {
+                    copycity[i] = city[i];
+                   onsole.WriteLine(copycity[i]);
+                }
+                for (int i = 0; i < copycity.Length; i++)
+                {
+                    Console.WriteLine(copycity[i]);
+                }*/
+
+            /* string[] name = { "AA", "BB", "CC", "DD", "EE" };
+             /* for(int i = 0;i <name.Length; i++) { 
+                  if (i %2 == 0) {
+                      Console.WriteLine(name[i]);
+                  }
+             for (int i = 0; i < name.Length; i++)
+             {
+                 if (i % 2 == 1)
+                 {
+                     Console.WriteLine(name[i]);
+                 }*/
+            /* int sum = 0; 
+             for(int i =1; i<= 5; i++)
+              {
+                  sum += i;
+              }
+              Console.WriteLine(sum);*/
+            /* int sum = 0;
+             int[] salary = { 20, 22, 30, 55, 60, 75 };
+             for (int i = 0; i < salary.Length; i++) { 
+             sum += salary [i];
+             }
+             Console.WriteLine(sum);
+             int avg = sum / salary.Length;
+             Console.WriteLine("Avarage is " + avg);*/
+            /*int o = 1;      //question 1 Write a program to print all numbers from 1 to 100.
+            while (o <= 100)
             {
-                Console.WriteLine("this month have 31 days");
+                Console.WriteLine(o);
+                o++;
             }
-            else if (number11 == 6)
+ 
+            for (int i = 100; i >= 1; i--)   // question 2 Write a program to print all natural numbers from 1 to 100 in reverse order.
             {
-                Console.WriteLine("this month have 30 days");
+                Console.WriteLine(i);
             }
-            else if (number11 == 7)
+            // 3. Write a program to print all even numbers between 1 to 100.
+            for (int j = 1; j <= 100; j++)
             {
-                Console.WriteLine("this month have 31 days");
+                if (j % 2 == 0)
+                {
+                    Console.WriteLine(j);
+                }
             }
-            else if (number11 == 8)
+            //4. Write a program to print all odd numbers between 1 to 100
+            for (int e= 1; e <= 100; e++)
             {
-                Console.WriteLine("this month have 31 days");
-            }
-            else if (number11 == 9)
+                if (e%2 == 1)
+                {
+                    Console.WriteLine(e);
+                }
+            }*/
+            //Write a program to count even number from 1 to 100.
+            int count = 0;
+            for (int z = 1; z <= 100; z++)
             {
-                Console.WriteLine("this month have 30 days");
+                if (z % 2 == 0)
+                {
+                    count++;
+                }
             }
-            else if (number11 == 10)
+            Console.WriteLine(count);
+            //Write a program to count odd number from 1 to 100.
+            int counts = 0;
+            for (int i = 1; i <= 100; i++)
             {
-                Console.WriteLine("this month have 31 days");
+                if (i % 2 == 1)
+                {
+                    counts++;
+                }
             }
-            else if (number11 == 11)
+            Console.WriteLine(counts);
+            //6. Write a program to count even and odd from 1 to 100.
+            int allcount = 0;
+            for (int e = 1; e <= 100; e++)
             {
-                Console.WriteLine("this month have 30 days");
+                if (e % 2 == 0 || e % 2 == 1)
+                {
+                    allcount++;
+                }
+
             }
-            else if (number11 == 12)
+            Console.WriteLine(allcount);
+            //7. Write a program to print number between 100 and 200 which are divisible by 3.
+            for (int a = 100; a <= 200; a++)
             {
-                Console.WriteLine("this month have 31 days");
+                if (a % 3 == 0)
+                {
+                    Console.WriteLine(a);
+                }
             }
-            else
+
+            //9. Print all alphabets from a to z.
+            Console.Write(" all alphabets from a to z is ");
+            for (char ch = 'a'; ch <= 'z'; ch++)
             {
-                Console.WriteLine("it isn't month number");
+                Console.Write(ch);
             }
+
+            //10. Print all alphabets from z to a.
+            Console.Write(" all alphabets from z to a is ");
+            for (char cha = 'z'; cha >= 'a'; cha--)
+            {
+                Console.Write(cha);
+            }
+            
+            //11. Find sum of all natural number from 1 to 100.
+            int sum = 0;
+
+            for (int l = 1; l <= 100; l++)
+            {
+                sum += l;
+            }
+            Console.WriteLine("the sum of all natural number is "+ sum);
         }
     }
 }
