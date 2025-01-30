@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.Remoting.Services;
 using System.Security.Principal;
 using System.Threading;
 
@@ -635,7 +636,7 @@ namespace ConsoleApp1
              {
                  Console.WriteLine("it isn't month number");
              }*/
-            char vowel = 'a';
+            /*char vowel = 'a';*/
             /*if( vowel == 'a')
             {
                 Console.WriteLine("this is vowel"); 
@@ -644,72 +645,72 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("this is not vowel");
             }*/
-            switch (vowel)
-            {
-                case 'a': Console.WriteLine("this is vowel"); break;
-                case 'e': Console.WriteLine("this is vowel"); break;
-                case 'i':
-                    Console.WriteLine("this is vowel"); break;
-                case 'o':
-                    Console.WriteLine("this is vowel"); break;
-                case 'u':
-                    Console.WriteLine("this is vowel"); break;
-                default: Console.WriteLine("this is not vowel"); break;
-            }
-            char grade = 'A';
-            switch (grade)
-            {
-                case 'A':
-                    Console.WriteLine("Excellent"); break;
-                case 'B': Console.WriteLine("Well done"); break;
-                case 'C':
-                    Console.WriteLine("Well done"); break;
-                case 'D':
-                    Console.WriteLine("Pass"); break;
-                case 'F':
-                    Console.WriteLine("Try again"); break;
-                default:
-                    Console.WriteLine("Invalid inpuid"); break;
-            }
-            char vowels = 'h';
-            switch (vowels)
-            {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-                    Console.WriteLine("this is vowel"); break;
-                default:
-                    Console.WriteLine("this is not vowel"); break;
-            }
-            int num1 = 10;
-            int num2 = 20;
-            char operator1 = '+';
-            /*if (operator1 == '+')
-            {
-                Console.WriteLine("the sum of two values is " + (num1 + num2));
-            }
-            else if (operator1 == '-')
-            { 
-                Console.WriteLine("the sub of two values is " + (num1 - num2));
-            }
-            else if (operator1 == '*')
-            {
-                Console.WriteLine("the mul of two values is " + (num1 * num2));
-            }
-            else if (operator1 == '/')//sar lat
-            {
-                Console.WriteLine("the div of the two values is " + (num1 / num2));
-            }
-            else if (operator1 == '%')// remainder
-            {
-                Console.WriteLine("the mod if two values is " + (num1 % num2));
-            }
-            else
-            {
-                Console.WriteLine("wrong operator");        
-        }*/
+            /* switch (vowel)
+             {
+                 case 'a': Console.WriteLine("this is vowel"); break;
+                 case 'e': Console.WriteLine("this is vowel"); break;
+                 case 'i':
+                     Console.WriteLine("this is vowel"); break;
+                 case 'o':
+                     Console.WriteLine("this is vowel"); break;
+                 case 'u':
+                     Console.WriteLine("this is vowel"); break;
+                 default: Console.WriteLine("this is not vowel"); break;
+             }
+             char grade = 'A';
+             switch (grade)
+             {
+                 case 'A':
+                     Console.WriteLine("Excellent"); break;
+                 case 'B': Console.WriteLine("Well done"); break;
+                 case 'C':
+                     Console.WriteLine("Well done"); break;
+                 case 'D':
+                     Console.WriteLine("Pass"); break;
+                 case 'F':
+                     Console.WriteLine("Try again"); break;
+                 default:
+                     Console.WriteLine("Invalid inpuid"); break;
+             }
+             char vowels = 'h';
+             switch (vowels)
+             {
+                 case 'a':
+                 case 'e':
+                 case 'i':
+                 case 'o':
+                 case 'u':
+                     Console.WriteLine("this is vowel"); break;
+                 default:
+                     Console.WriteLine("this is not vowel"); break;
+             }
+             int num1 = 10;
+             int num2 = 20;
+             char operator1 = '+';
+             /*if (operator1 == '+')
+             {
+                 Console.WriteLine("the sum of two values is " + (num1 + num2));
+             }
+             else if (operator1 == '-')
+             { 
+                 Console.WriteLine("the sub of two values is " + (num1 - num2));
+             }
+             else if (operator1 == '*')
+             {
+                 Console.WriteLine("the mul of two values is " + (num1 * num2));
+             }
+             else if (operator1 == '/')//sar lat
+             {
+                 Console.WriteLine("the div of the two values is " + (num1 / num2));
+             }
+             else if (operator1 == '%')// remainder
+             {
+                 Console.WriteLine("the mod if two values is " + (num1 % num2));
+             }
+             else
+             {
+                 Console.WriteLine("wrong operator");        
+         }*/
             /*switch (operator1)
             {
                 case '+':
@@ -928,67 +929,410 @@ namespace ConsoleApp1
                 }
             }*/
             //Write a program to count even number from 1 to 100.
-            int count = 0;
-            for (int z = 1; z <= 100; z++)
-            {
-                if (z % 2 == 0)
-                {
-                    count++;
-                }
-            }
-            Console.WriteLine(count);
-            //Write a program to count odd number from 1 to 100.
-            int counts = 0;
-            for (int i = 1; i <= 100; i++)
-            {
-                if (i % 2 == 1)
-                {
-                    counts++;
-                }
-            }
-            Console.WriteLine(counts);
-            //6. Write a program to count even and odd from 1 to 100.
-            int allcount = 0;
-            for (int e = 1; e <= 100; e++)
-            {
-                if (e % 2 == 0 || e % 2 == 1)
-                {
-                    allcount++;
-                }
+            /* int count = 0;
+             for (int z = 1; z <= 100; z++)
+             {
+                 if (z % 2 == 0)
+                 {
+                     count++;
+                 }
+             }
+             Console.WriteLine(count);
+             //Write a program to count odd number from 1 to 100.
+             int counts = 0;
+             for (int i = 1; i <= 100; i++)
+             {
+                 if (i % 2 == 1)
+                 {
+                     counts++;
+                 }
+             }
+             Console.WriteLine(counts);
+             //6. Write a program to count even and odd from 1 to 100.
+             int allcount = 0;
+             for (int e = 1; e <= 100; e++)
+             {
+                 if (e % 2 == 0 || e % 2 == 1)
+                 {
+                     allcount++;
+                 }
 
-            }
-            Console.WriteLine(allcount);
-            //7. Write a program to print number between 100 and 200 which are divisible by 3.
-            for (int a = 100; a <= 200; a++)
-            {
-                if (a % 3 == 0)
-                {
-                    Console.WriteLine(a);
-                }
-            }
+             }
+             Console.WriteLine(allcount);
+             //7. Write a program to print number between 100 and 200 which are divisible by 3.
+             for (int a = 100; a <= 200; a++)
+             {
+                 if (a % 3 == 0)
+                 {
+                     Console.WriteLine(a);
+                 }
+             }
 
-            //9. Print all alphabets from a to z.
-            Console.Write(" all alphabets from a to z is ");
-            for (char ch = 'a'; ch <= 'z'; ch++)
-            {
-                Console.Write(ch);
-            }
+             //9. Print all alphabets from a to z.
+             Console.Write(" all alphabets from a to z is ");
+             for (char ch = 'a'; ch <= 'z'; ch++)
+             {
+                 Console.Write(ch);
+             }
 
-            //10. Print all alphabets from z to a.
-            Console.Write(" all alphabets from z to a is ");
-            for (char cha = 'z'; cha >= 'a'; cha--)
+             //10. Print all alphabets from z to a.
+             Console.Write(" all alphabets from z to a is ");
+             for (char cha = 'z'; cha >= 'a'; cha--)
+             {
+                 Console.Write(cha);
+             }
+
+             //11. Find sum of all natural number from 1 to 100.
+             int sum = 0;
+
+             for (int l = 1; l <= 100; l++)
+             {
+                 sum += l;
+             }
+             Console.WriteLine("the sum of all natural number is "+ sum);*/
+            /* int[,] age = {     {10,20,30 } ,{20,30,40 }  };
+             int[] age2 = { 10, 20, 30 };
+             Console.WriteLine("Number of room in 1d array "+ age2.Length);
+             Console.WriteLine( "number of room in 2d array" + age.Length);
+             Console.WriteLine(age[0,0]);
+             Console.WriteLine(age[0,1]);
+             Console.WriteLine(age[0,2]);
+             Console.WriteLine(age[1,0]);
+             Console.WriteLine(age[1,1]);
+             Console.WriteLine(age[1,2]);*/
+            /*int[,] age = new int[3, 4];
+            age[0,0] = 5;
+            age[0,1] = 6;
+            age[0,2] = 7;
+            age[0,3] = 8;
+
+            age[1,0] = 1;
+            age[1,1] = 2;
+            age[1,2] = 3;
+            age[1,3] = 4;
+
+            age[2, 0] = 10;
+            age[2, 1] = 20;
+            age[2,2] = 30;
+            age[2, 3] = 40;
+
+           /* Console.WriteLine("first row first col "+ age[0,0]);
+            Console.WriteLine("first row second col" + age[0,1]);
+            Console.WriteLine("first row third col "+ age[0,2]);
+            Console.WriteLine("first row fourth col "+ age[0,3]);
+
+            Console.WriteLine("second row first col " + age[1, 0]);
+            Console.WriteLine("second row second col" + age[1, 1]);
+            Console.WriteLine("second row third col " + age[1, 2]);
+            Console.WriteLine("second row fourth col " + age[1, 3]);
+
+            Console.WriteLine("third row first col " + age[2, 0]);
+            Console.WriteLine("third row second col" + age[2, 1]);
+            Console.WriteLine("third row third col " + age[2, 2]);
+            Console.WriteLine("third row fourth col " + age[2, 3]);*/
+
+            /* for (int i= 0; i<4; i++)   //for first row
+               {
+                   Console.WriteLine(age[0,i]);
+               }
+             for(int i=0; i<4; i++)  // for second row
             {
-                Console.Write(cha);
+                Console.WriteLine(age[1,i]);
             }
+             for(int i=0; i<4; i++) // for third row
+            {
+                Console.WriteLine(age[2,i]);
+            }*/
+            /* for (int j = 0; j < 3; j++) {    // for all row
+                 for (int i = 0; i < 4; i++) 
+                 {
+                     Console.WriteLine(age[j,i]);
+                 }
+             }*/
+            int[,] age = new int[3, 4];
+            Console.WriteLine(age.GetType().IsArray);
+            /// object data type that why they add new
+            /*Console.WriteLine("please enter a number");  // the long way
+            string num = Console.ReadLine();
+            int number = Convert.ToInt32(num); // convert string to int
+            age[0,0] = number;
+            Console.WriteLine("the data is " + age[0,0]);
             
-            //11. Find sum of all natural number from 1 to 100.
-            int sum = 0;
+            Console.WriteLine("please enter a number");
+             num = Console.ReadLine();
+             number = Convert.ToInt32(num); // convert string to int
+            age[0, 1] = number;
+            Console.WriteLine("the data is " + age[0, 1]);
 
-            for (int l = 1; l <= 100; l++)
+            Console.WriteLine("please enter a number");
+            num = Console.ReadLine();
+            number = Convert.ToInt32(num); // convert string to int
+            age[0, 2] = number;
+            Console.WriteLine("the data is " + age[0, 2]);
+
+            Console.WriteLine("please enter a number");
+            num = Console.ReadLine();
+            number = Convert.ToInt32(num); // convert string to int
+            age[0, 3] = number;
+            Console.WriteLine("the data is " + age[0, 3]);*/
+
+
+            /* for (int i = 0; i < 4; i++) {
+                 Console.WriteLine("please enter a number");
+                 string num = Console.ReadLine();
+                 int number = Convert.ToInt32(num); // convert string to int
+                 age[0, i] = number;
+                 Console.WriteLine("the data is " + age[0, i]);
+             }
+
+             for (int i = 0; i < 4; i++)
+             {
+                 Console.WriteLine("please enter a number");
+                 string num = Console.ReadLine();
+                 int number = Convert.ToInt32(num); // convert string to int
+                 age[1, i] = number;
+                 Console.WriteLine("the data is " + age[1, i]);
+             }
+
+             for (int i = 0; i < 4; i++)
+             {
+                 Console.WriteLine("please enter a number");
+                 string num = Console.ReadLine();
+                 int number = Convert.ToInt32(num); // convert string to int
+                 age[2, i] = number;
+                 Console.WriteLine("the data is " + age[2, i]);
+             }*/
+            /*for (int j=0; j<3; j++)
+             {
+                 for(int i=0; i<4; i++)
+                 {
+                     Console.WriteLine("please enter a number");
+                     string num = Console.ReadLine();
+                     int number = Convert.ToInt32(num); // convert string to int
+                     age[j, i] = number;
+                     Console.WriteLine("the data is " + age[j, i]);// see the result immediately
+                 }
+             }*/
+            for (int j=0; j<3; j++)
+             {
+                 for(int i=0; i < 4; i++)
+                 {
+                     Console.WriteLine($"row {j} col {i} is " + age[j,i]);// this kind of writing will tell you what is what clearly
+                     Console.WriteLine($"The result is {age[j,i]}"); // another way of writing the first one
+                 }
+             }// see the last result*/
+            /* for(int i=0; i<5; i++)   // the long way
+             {
+                 Console.Write("*");
+             }
+             Console.WriteLine();
+             for (int i = 0; i < 5; i++)
+             {
+                 Console.Write("*");
+             }
+             Console.WriteLine();
+             for (int i = 0; i < 5; i++)
+             {
+                 Console.Write("*");
+             }
+             Console.WriteLine();*/
+            /*for (int i = 0; i < 3; i++)
             {
-                sum += l;
-            }
-            Console.WriteLine("the sum of all natural number is "+ sum);
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write($"{j} ");
+                }
+                Console.WriteLine();
+            }*/
+             /*int sum = 0;
+             int[] salary = { 100, 200, 250, 150, 350 };
+             for(int i=0; i< salary.Length; i++)
+             {
+
+                 Console.WriteLine($"Your salary is {salary[i]}" );
+                 sum += salary[i];
+
+             }
+             Console.WriteLine("the total salary of all employees is " + sum);
+             /*  int sum = 0;
+               for (int i=1; i<=5;  i++)
+               {
+                   sum += i;
+
+               }
+               Console.WriteLine(sum);*/
+            // 5.Write a program to find the factorial value of given number.
+            /* Console.WriteLine("enter a number for factorial value");
+              int number = Convert.ToInt32(Console.ReadLine());
+              if (number < 0) { Console.WriteLine("Factorial is not possible"); }
+              else
+              {
+                  int factorial = 1;
+                  for (int i = 1; i <= number; i++)
+                  {
+                      factorial *= i;
+                  }
+                  Console.WriteLine($"The factorial of {number} is {factorial}");
+              }*/
+            /* 14.Print the following output.Use nested for loop.
+               *****
+               *****
+               *****
+               *****
+               *****    */
+
+
+            /* for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            } */
+            /* 15.Print the following output.Use nested for loop.
+  *
+  **
+  ***
+  ****
+  *****    */
+
+            /*for (int i = 1; i <= 5; i++) 
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }*/
+            /* 16.Print the following output.Use nested for loop.
+ * ****
+ ****
+ ***
+ **
+ *         */
+            /*for (int i = 5; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }*/
+            /*17.Print the following output.Use simple for loop.
+Output:
+6
+12
+18
+24
+30
+36
+42
+48
+54
+60*/
+            /*   int ans = 6;
+               for (int i =1; i<=10; i++)
+               {
+
+                   Console.WriteLine(ans*i);
+               } */
+            /*  18.Print the following output.Use simple for loop.
+     6 * 1 = 6
+     6 * 2 = 12
+     6 * 3 = 18
+     6 * 4 = 24
+     6 * 5 = 30
+     6 * 6 = 36
+     6 * 7 = 42
+     6 * 8 = 48
+
+      6 * 9 = 54
+     6 * 10 = 60
+     6 * 11 = 66
+     6 * 12 = 72         */
+            /*  int multi = 6;
+              for (int i = 1; i <= 12; i++)
+              {
+
+                  Console.WriteLine($"{multi} * {i}= {multi*i}");
+              }   */
+            /* 19.Print the following output.Use nested for loop.
+ 1 2 3 4 5
+ 1 2 3 4 5
+ 1 2 3 4 5
+ 1 2 3 4 5
+ 1 2 3 4 5    */
+            /* for(int i= 1; i<=5; i++)
+              {
+                  for (int j=1; j<=5; j++)
+                  {
+                      Console.Write(j);
+                  }
+                  Console.WriteLine();
+              }*/
+            /* 20.Print the following output.Use nested for loop.
+             1
+             12
+             123
+             1234
+             12345      */
+            /*   for(int i=1; i<=5; i++)
+{
+   for(int j=1; j<=i; j++)
+   {
+       Console.Write(j);
+   }
+   Console.WriteLine();
+}   */
+            /* 21.Print the following output.Use nested for loop.
+ 1 1 1 1 1
+ 2 2 2 2 2
+ 3 3 3 3 3
+ 4 4 4 4 4
+ 5 5 5 5 5      */
+            /* for (int i = 1; i <= 5;i++)
+             {
+                 for (int j = 1; j <=5;j++) 
+                 {
+                     Console.Write(i);
+                 }
+                 Console.WriteLine();
+             }  */
+            /*  22.Print the following output.Use nested for loop.
+   1 
+   2 2 
+   3 3 3 
+   4 4 4 4 
+   5 5 5 5 5   */
+            /*  for (int i = 1; i <= 5; i++)
+              {
+                  for (int j = 1; j <= i; j++)
+                  {
+                      Console.Write(i);
+                  }
+                  Console.WriteLine();
+              }   */
+            /* 23.Print the following output.Use nested for loop.
+                 1
+                 2 3
+                 4 5 6
+                 7 8 9 10
+                 11 12 13 14 15
+                 16 17 18 19 20 21 */
+            /*  int num = 1;
+              for (int i = 1; i <= 6; i++)
+              {
+                  for (int j = 1; j <= i; j++)
+                  {
+                      Console.Write(num +" ");
+                      num++;
+                  }
+                  Console.WriteLine();
+              }    */
+            
+
+
         }
     }
 }
