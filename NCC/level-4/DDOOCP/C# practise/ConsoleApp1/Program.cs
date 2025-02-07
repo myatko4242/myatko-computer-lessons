@@ -6,6 +6,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Runtime.Remoting.Services;
 using System.Security.Principal;
 using System.Threading;
+using System.Xml.Linq;
 
 namespace ConsoleApp1
 {
@@ -1049,9 +1050,7 @@ namespace ConsoleApp1
                      Console.WriteLine(age[j,i]);
                  }
              }*/
-            int[,] age = new int[3, 4];
-            Console.WriteLine(age.GetType().IsArray);
-            /// object data type that why they add new
+            /*int[,] age = new int[3, 4];*/// object data type that why they add new
             /*Console.WriteLine("please enter a number");  // the long way
             string num = Console.ReadLine();
             int number = Convert.ToInt32(num); // convert string to int
@@ -1113,14 +1112,14 @@ namespace ConsoleApp1
                      Console.WriteLine("the data is " + age[j, i]);// see the result immediately
                  }
              }*/
-            for (int j=0; j<3; j++)
-             {
-                 for(int i=0; i < 4; i++)
-                 {
-                     Console.WriteLine($"row {j} col {i} is " + age[j,i]);// this kind of writing will tell you what is what clearly
-                     Console.WriteLine($"The result is {age[j,i]}"); // another way of writing the first one
-                 }
-             }// see the last result*/
+            /*  for (int j=0; j<3; j++)
+               {
+                   for(int i=0; i < 4; i++)
+                   {
+                       Console.WriteLine($"row {j} col {i} is " + age[j,i]);// this kind of writing will tell you what is what clearly
+                       Console.WriteLine($"The result is {age[j,i]}"); // another way of writing the first one
+                   }
+               }// see the last result*/
             /* for(int i=0; i<5; i++)   // the long way
              {
                  Console.Write("*");
@@ -1144,23 +1143,23 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine();
             }*/
-             /*int sum = 0;
-             int[] salary = { 100, 200, 250, 150, 350 };
-             for(int i=0; i< salary.Length; i++)
-             {
+            /*int sum = 0;
+            int[] salary = { 100, 200, 250, 150, 350 };
+            for(int i=0; i< salary.Length; i++)
+            {
 
-                 Console.WriteLine($"Your salary is {salary[i]}" );
-                 sum += salary[i];
+                Console.WriteLine($"Your salary is {salary[i]}" );
+                sum += salary[i];
 
-             }
-             Console.WriteLine("the total salary of all employees is " + sum);
-             /*  int sum = 0;
-               for (int i=1; i<=5;  i++)
-               {
-                   sum += i;
+            }
+            Console.WriteLine("the total salary of all employees is " + sum);
+            /*  int sum = 0;
+              for (int i=1; i<=5;  i++)
+              {
+                  sum += i;
 
-               }
-               Console.WriteLine(sum);*/
+              }
+              Console.WriteLine(sum);*/
             // 5.Write a program to find the factorial value of given number.
             /* Console.WriteLine("enter a number for factorial value");
               int number = Convert.ToInt32(Console.ReadLine());
@@ -1330,7 +1329,134 @@ Output:
                   }
                   Console.WriteLine();
               }    */
-            
+            // 1.Write a program to copy all elements of one array into another array.
+
+            /*int[] Array1 = { 1, 2, 3, 4, 5 };
+             int[] Array2 = new int[Array1.Length];
+             for (int i = 0; i < Array1.Length; i++)
+             {
+                 Array2[i] = Array1[i];
+             }
+             Console.WriteLine("Array2:");
+             for (int i = 0; i < Array2.Length; i++)
+             {
+                 Console.WriteLine(Array2[i]);
+             }*/
+            //3.Write a program to print the elements of an array.
+
+            /* int[] arr = { 1, 2, 3, 4, 5 };
+             Console.WriteLine("Elements of the array:");
+             for (int i = 0; i < arr.Length; i++)
+             {
+                 Console.WriteLine(arr[i]);
+             }*/
+            // 4.Write a program to print the elements of an array in reverse order.
+            /*[] arr = { 1, 2, 3, 4, 5 };
+            Console.WriteLine("Elements of the array in reverse order:");
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(arr[i]);
+            }*/
+
+            //  6.Write a program to print the elements of an array present on odd position.
+            /*int[] arr = { 10, 20, 30, 40, 50, 60, 70 };
+            Console.WriteLine("Elements at odd positions (1st, 3rd, 5th, ...):");
+            for (int i = 0; i < arr.Length; i += 2)
+            {
+                Console.WriteLine(arr[i]);
+            }*/
+            // 7.Write a program to print the elements of an array present on even position.
+            /* int[] arr = { 10, 20, 30, 40, 50, 60, 70 };
+             Console.WriteLine("Elements at even positions (2nd, 4th, 6th, ...):");
+             for (int i = 1; i < arr.Length; i += 2)
+             {
+                 Console.WriteLine(arr[i]);
+             }*/
+
+            // 8.Write a program to print the largest element in an array.
+            /* int[] arr = { 10, 20, 5, 45, 30 };
+             int largest = arr[0];
+             for (int i = 1; i < arr.Length; i++)
+             {
+                 if (arr[i] > largest)
+                 {
+                     largest = arr[i];
+                 }
+             }
+             Console.WriteLine("The largest element in the array is: " + largest);*/
+            // 9.Write a program to print the smallest element in an array.
+            /* int[] arr = { 10, 20, 5, 45, 30 };
+             int smallest = arr[0];
+             for (int i = 1; i < arr.Length; i++)
+             {
+                 if (arr[i] < smallest)
+                 {
+                     smallest = arr[i];
+                 }
+             }
+             Console.WriteLine("The largest element in the array is: " + smallest);*/
+            //10.Write a program to print the sum of all the items of the array.
+
+            /* int[] arr = { 1, 2, 3, 4, 5 };
+             int sum = 0;
+             for (int i = 0; i < arr.Length; i++)
+             {
+                 sum += arr[i];
+             }
+             Console.WriteLine("The sum of all items in the array is: " + sum);*/
+            //15.	Write a   program to count even and odd number of an array and print it out.
+            /* int[] arr = { 10, 21, 32, 43, 54, 65, 76, 87, 98 };
+             int even = 0;
+             int odd = 0;
+             for (int i = 0; i < arr.Length; i++)
+             {
+                 if (arr[i] % 2 == 0)
+                 {
+                     even++;
+                 }
+                 else
+                 {
+                     odd++;
+                 }
+             }
+             Console.WriteLine("Count of even numbers: " + even);
+             Console.WriteLine("Count of odd numbers: " + odd);*/
+            //16.	Write a   program to print the average value of an array.
+            /* int[] arr = { 10, 20, 30, 40, 50 };
+             int sum = 0;
+             for (int i = 0; i < arr.Length; i++)
+             {
+                 sum += arr[i];
+             }
+             int average = sum / arr.Length;
+             Console.WriteLine("The average value of the array is: " + average);*/
+            //17.	Write a   program to store number of value in an array using Scanner and print it.
+
+            /*Console.Write("Enter the number of elements: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Enter the value of element ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("The elements of the array are:");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }*/
+            //18.	Write a   program to print sum of all odd number of an array.
+            /*int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int odd = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 1)
+                {
+                    odd += arr[i];
+                }
+            }
+            Console.WriteLine("Sum of all odd numbers in the array: " + odd);*/
+
 
 
         }
