@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Eventing.Reader;
@@ -1456,9 +1457,244 @@ Output:
                 }
             }
             Console.WriteLine("Sum of all odd numbers in the array: " + odd);*/
+            /* int amount = 100;/////
+             int qty = 0;
+             try
+             {
+                 int result = amount / qty;
+                 Console.WriteLine(result);
+             }
+             catch(Exception e)
+             {
+                 Console.WriteLine(e);
+             }
+
+             Console.WriteLine("Hello World");*/////
+
+            /*Console.WriteLine("1 Hello World");
+            Console.WriteLine("2 Hello World");
+            Console.WriteLine("3 Hello World");
+            Console.WriteLine("4 Hello World");
+            Console.WriteLine("5 Hello World");
+            int amount = 100;
+            int qty = 0;
+            try
+            {
+                int result = amount / qty;
+                Console.WriteLine(result);
+            }
+            catch (DivideByZeroException e)// in case they need specific name
+            { 
+                Console.WriteLine(e);
+            }
+            
+            Console.WriteLine("6 Hello World");
+            Console.WriteLine("7 Hello World");
+            Console.WriteLine("8 Hello World");
+            Console.WriteLine("9 Hello World");
+            Console.WriteLine("10 Hello World");*/
+            /*char a= 'A';
+            char[] name = { 'M', 'y', 'a', 't', ' ', 'K', 'o' };
+            Console.WriteLine(name.Length);
+            string name1 = "Myat Ko";
+            Console.WriteLine(name1.Length);*/
+            /* Console.WriteLine("1 Hello World");
+             Console.WriteLine("2 Hello World");
+             Console.WriteLine("3 Hello World");
+             Console.WriteLine("4 Hello World");
+             Console.WriteLine("5 Hello World");
+             /* try
+              {
+                  int[] salary = new int[5];
+                  salary[0] = 1000;
+                  salary[1] = 2000;
+                  salary[2] = 3000;
+                  salary[3] = 4000;
+                  salary[4] = 5000;
+                  salary[5] = 6000;
+              }
+              catch (IndexOutOfRangeException e) 
+              {
+                  Console.WriteLine(e);
+              }*/
+            /* try
+             {
+                 int amount = 100;
+                 int qty = 0;
+                 int result = amount / qty;
+                 Console.WriteLine(result);
+             }
+             catch (IndexOutOfRangeException ex) 
+             { 
+                 Console.WriteLine(ex);
+             }*/
+            /* try
+             {
+                 string name = null;
+                 Console.WriteLine(name.Length);
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex);
+             }*/
+            /*try
+            {
+                string age = "a21";
+                int age2 = Convert.ToInt32(age);
+                Console.WriteLine(age2);
+            }
+            catch (FormatException e) 
+            { 
+                Console.WriteLine(e);
+            }*/
+            /* try
+             {
+                 int qty = 0;
+                 int data = 25 / qty;
+                 Console.WriteLine(data);
+             }
+             catch(Exception ex)
+             {
+                 Console.WriteLine(ex);
+             }
+             finally
+             {
+                 Console.WriteLine("This is finally Block");
+                 Console.WriteLine("Close");
+             }*/
+            /* try
+             {
+                 int qty = 0;
+                 int data = 25 / qty;
+                 Console.WriteLine(data);
+             }
+             catch (IndexOutOfRangeException ex)
+             {
+                 Console.WriteLine(ex);
+             }
+             finally
+             {
+                 Console.WriteLine("This is finally Block");
+                 Console.WriteLine("Close");
+             }*/
+
+            /* Console.WriteLine("6 Hello World");
+             Console.WriteLine("7 Hello World");
+             Console.WriteLine("8 Hello World");
+             Console.WriteLine("9 Hello World");
+             Console.WriteLine("10 Hello World");*/
+            //object
+            /* testingmethod test = new testingmethod();
+             int rr = test.addTwoNumber();
+             Console.WriteLine("the result is "+rr);
+             string nn=test.getName();
+             Console.WriteLine("Your name is " + nn);
+             double aa =test.calculateCircleArea();
+             Console.WriteLine("the area is "+aa);
+         Program pp = new Program();//new object
+            int add= pp.addTwoNumber();
+             Console.WriteLine("two number is "+add);
+            string get= pp.getName();
+             Console.WriteLine("name is "+get);
+             double area =pp.calculateCircleArea();
+             Console.WriteLine("the area of circle is "+area);*/
+            /*Console.WriteLine("Enter a first number");
+            int num1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a second number");
+            int num2 = Convert.ToInt32(Console.ReadLine());*/
+            /* testingmethod tt = new testingmethod();
+             int add = tt.addTwoNumber(100,20);
+             Console.WriteLine(add);*/
+           /* int num1 = 100;
+            int num2 =20;
+            int add=(num1+ num2)/2;
+            Console.WriteLine("The result is "+add);*/
+          /* testingmethod test = new testingmethod();
+            int aaa=test.addTwoNumber(100, 20);
+            Console.WriteLine(aaa);
+            Console.WriteLine("Hello world");
+            int x = 10;
+            int y = 20;
+            int mul = x*y;
+            Console.WriteLine("mul is " + mul);
+            /*int a = 200;
+            int b = 300;
+            int result = (a + b)/2;
+            Console.WriteLine("the result is " + result);*/
+           /* int rr=test.addTwoNumber(20,30);
+            Console.WriteLine(rr);*/
+
+            testingmethod tt = new testingmethod();
+            /* tt.addTwoNumber(100, 20);
+             string rr = tt.rank("Supervisor");
+             double salary = 0.0;
+             if (rr == "Supervisor")
+             {
+                 salary = 100;
+             }
+             else if (rr == "Manager")
+             {
+                 salary = 200;
+             }
+             else
+             {
+                 salary = 80;
+             }*/
+            double result = tt.convertLbtoKg(100);
+            Console.WriteLine(result);
+            double result1 = tt.convertLbtoKg(105);
+            Console.WriteLine(result1);
+            double result2 = tt.convertLbtoKg(150);
+            Console.WriteLine(result2);
+
+            /* int num1 = 33;
+             if(num1 %2 == 0)
+             {
+                 Console.WriteLine("even");
+             }
+             else
+             {
+                 Console.WriteLine("Odd");
+             }
+             int num2 = 50;
+             if (num2 % 2 == 0)
+             {
+                 Console.WriteLine("even");
+             }
+             else
+             {
+                 Console.WriteLine("Odd");
+             }*/
+            bool rrr =tt.evenodd(33);
+            Console.WriteLine(rrr);
+            bool rr = tt.evenodd(56);
+            Console.WriteLine(rr);
 
 
 
+
+
+
+        }
+        public int addTwoNumber()
+        {
+            int num1 = 100;
+            int num2 = 20;
+            int result = 0;
+            result = num1 + num2;
+            return result;
+        }
+        public string getName()
+        {
+            string name = "Myat Ko";
+            return name;
+        }
+        public double calculateCircleArea()
+        {
+            double pi = 3.14;
+            double r = 2;
+            double area = pi * r * r;
+            return area;
         }
     }
 }
